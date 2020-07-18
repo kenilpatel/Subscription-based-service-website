@@ -1,0 +1,180 @@
+.heading{
+	margin:auto;
+	padding-top:0px;
+}
+h4.error
+{
+  color: orange;
+}
+.rform
+{
+  width:60%;
+  margin:auto;
+  padding-top:10px;
+}
+button
+{
+  width:25%;
+}
+input{
+  color:black;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+a
+{
+	color: white;
+}
+.black
+{
+	color:black;
+}
+.popup1 {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:10;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 50%;
+  overflow: auto;
+}
+
+
+.popup1 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup1 .close:hover {
+  color: #06D85F;
+}
+.popup1 .content {
+  max-height: 80%;
+  overflow: auto;
+}
+
+.product
+{
+	margin:auto;
+	margin-top: 0px;
+
+}
+.points
+{
+	margin:auto;
+	width:50%;
+}
+.product_list
+{
+	margin:auto;
+	margin-top: 10px;
+	width:60%;
+
+}
+.monthly
+{
+	padding: 10px;
+	border: 4px solid white;
+  margin-bottom:10px;
+}
+.main
+{
+	position: relative;
+    color: white;
+}
+.center_text
+{
+
+	text-align:center;
+}
+@font-face {
+  font-family: OpenSans;
+  src:url(OpenSans-Regular.ttf);
+}
+body
+{
+	background: url("bgimage.jpg");
+	background-size: cover;
+	color: white;
+	font-family: OpenSans;
+}
+body:before {
+
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}

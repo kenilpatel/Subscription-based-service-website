@@ -1,0 +1,28 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+	<br>
+	<h1 style="text-align: center;">Your journey to best product starts from here</h1>
+	<br>
+	<br>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<div class="rform">
+			{% for f in form %}
+				<h3 >{{f.label}}</h3>
+				{{f}}
+				<br>
+				<h4 class="errors">{{f.errors}}</h4>
+			{% endfor %}
+			<a href="{% url 'login' %}">Already a user? Login</a>
+			<br>
+			<br>
+			<div style="text-align:center;"><button type="submit" class="btn btn-lg btn-primary">Register</button></div>
+			<br>
+			<br>
+		</div>
+	</form>
+
+{% endblock %}
+
+

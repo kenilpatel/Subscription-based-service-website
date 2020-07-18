@@ -1,0 +1,30 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+	<form action="" method="POST">
+		{% csrf_token %}
+		<div class="rform">
+			<h1 style="text-align: center;">Log in here to get started</h1>
+			<br><br>
+			<h3 >Username</h3>
+			<input type="text" name="username">
+			<br>
+			<h3 >Password</h3>
+			<input type="Password" name="password">
+			<br>
+			<br>
+			{% if messages %}
+				{% for message in messages %}
+					<h4 class="error">{{message}}</h4>
+					<br>
+				{% endfor %}
+			{% endif %}
+			<a href="{% url 'registeration' %}">Don't Have an account? Sign up now</a>
+
+			<div style="text-align:center;"><button type="submit" class="btn btn-lg btn-primary">Login</button></div>
+			<br>
+			<br>
+		</div>
+	</form>
+
+{% endblock %}
