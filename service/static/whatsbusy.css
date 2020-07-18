@@ -1,6 +1,31 @@
 .heading{
 	margin:auto;
-	padding-top:0px;
+	padding-top:40px;
+}
+.greet
+{
+  margin-bottom:100px;
+}
+.service-button
+{
+  margin:100px;
+  text-align:center;
+}
+.subscription-detail
+{
+  text-align:center;
+  margin:100px;
+}
+.service
+{
+  width:80%;
+  margin: auto;
+  text-align:center;
+  padding-top:100px;
+  padding-bottom:100px;
+  padding-right: 10px;
+  padding-left:10px;
+  border:1px solid white ;
 }
 h4.error
 {
@@ -136,7 +161,7 @@ a
 .product_list
 {
 	margin:auto;
-	margin-top: 10px;
+	margin-top: 100px;
 	width:60%;
 
 }
@@ -144,6 +169,7 @@ a
 {
 	padding: 10px;
 	border: 4px solid white;
+  margin-top:100px;
   margin-bottom:10px;
 }
 .main

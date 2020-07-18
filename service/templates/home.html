@@ -1,41 +1,24 @@
 {% extends "navbar.html" %}
 
 {% block content %}
-		{{message}}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<div class="main">
 			<div class="heading">
 				<h2 class="center_text">Welcome to whatsbusy premium services</h2>
 			</div>
 			<br>
-			<div class="Product_list">
+			<br>
+			<br>
+			<div class="service-button">
 
-				{% if total == 0 %}
-					<h1>No services available to sell at this time</h1>
-				{% else %}
-					{% for d in services %}
-						<div class="monthly text-center">
-							<h3>{{d.name}} subscription </h3>
-							<h2>${{d.charges}}*<h2>
-							<h6>Auto renews after each month</h6>
-							<br>
-							<h4>Access to exclusive content</h4>
-							<h4>Cancel anytime</h4>
-							<br>
-							<a href="" role="button" class="btn btn-primary btn-lg active" aria-pressed="true">Buy now</a>
-							<br>
-							<br>
-						</div>
-						<br>
-					{% endfor %}
-				{% endif %}
+				<a href="{% url 'product' %}" role="button" class="btn btn-primary btn-lg active" aria-pressed="true">Click here to access services</a>
+
 			</div>
 		</div>
-
-		{% if messages %}
-		{% for message in messages %}
-	    	{{ message }}
-	    {% endfor %}
-		{% endif %}
 
 {% endblock %}
 
