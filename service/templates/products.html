@@ -24,7 +24,18 @@
 							<h4>Cancel anytime</h4>
 							<h4>Try 7 days for free</h4>
 							<br>
-							<a href="{% url 'checkout' %}" role="button" class="btn btn-primary btn-lg active" aria-pressed="true">Buy now</a>
+							<form action="{% url 'checkout' %}" method="POST">
+					          {% csrf_token %}
+					          <script
+					            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+					            data-key="pk_test_51H5ymuBfWC4lPABgSUejWIzbGqY1zFoAR9Rabd3Gu6jaUwKiP9QXuNaMZS3AYs3UlnWz0SWep5AtSdMAx1Nmzs4y00oXI3Ez2T"
+					            data-amount="4999"
+					            data-name="Whatsbusy services"
+					            data-description="Premium Membership"
+					            data-email="{{ user.email }}"
+					            data-locale="auto">
+					          </script>
+					        </form>
 							<br>
 							<br>
 						</div>
@@ -33,6 +44,9 @@
 				{% endif %}
 			</div>
 		</div>
+
+
+
 
 {% endblock %}
 
