@@ -8,6 +8,12 @@ h4.error
   margin:auto;
   padding-top:10px;
 }
+.col
+{
+  width:70%;
+  margin:auto;
+  text-align:center;
+}
 button
 {
   width:25%;
@@ -22,7 +28,10 @@ input{
   border-radius: 4px;
   box-sizing: border-box;
 }
-
+.heading
+{
+margin-top:100px;
+}
 
 a
 {

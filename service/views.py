@@ -93,8 +93,8 @@ class Product(TemplateView):
 
 
 class CheckOut(TemplateView):
-    template = "checkout.html"
+    template = "home.html"
 
     @method_decorator(login_required(login_url="login/"))
-    def get(self, request):
+    def post(self, request):
         return render(request, self.template, {})

@@ -8,12 +8,6 @@
 			</div>
 			<br>
 			<div class="Product_list">
-				{% if request.user.is_authenticated %}
-					<h2 style="text-align: center;">You haven't subscribed to any service so subscribe to service and start the journey</h2>
-				{% endif %}
-				{% if total == 0 %}
-					<h1>No services available to sell at this time</h1>
-				{% else %}
 					{% for d in services %}
 						<div class="monthly text-center">
 							<h3>{{d.name}} subscription </h3>
@@ -24,24 +18,27 @@
 							<h4>Cancel anytime</h4>
 							<h4>Try 7 days for free</h4>
 							<br>
-							<form action="{% url 'checkout' %}" method="POST">
-					          {% csrf_token %}
-					          <script
-					            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-					            data-key="pk_test_51H5ymuBfWC4lPABgSUejWIzbGqY1zFoAR9Rabd3Gu6jaUwKiP9QXuNaMZS3AYs3UlnWz0SWep5AtSdMAx1Nmzs4y00oXI3Ez2T"
-					            data-amount="4999"
-					            data-name="Whatsbusy services"
-					            data-description="Premium Membership"
-					            data-email="{{ user.email }}"
-					            data-locale="auto">
-					          </script>
-					        </form>
+							{% if request.user.is_authenticated %}
+								<form action="{% url 'checkout' %}" method="POST">
+						          {% csrf_token %}
+						          <script
+						            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+						            data-key="pk_test_51H5ymuBfWC4lPABgSUejWIzbGqY1zFoAR9Rabd3Gu6jaUwKiP9QXuNaMZS3AYs3UlnWz0SWep5AtSdMAx1Nmzs4y00oXI3Ez2T"
+						            data-amount="4999"
+						            data-name="Whatsbusy services"
+						            data-description="Premium Membership"
+						            data-email="{{ user.email }}"
+						            data-locale="auto">
+						          </script>
+						        </form>
+						    {% else %}
+						    	<h4>Want to buy this plan? <a style="color:orange" href="{% url 'login' %}">login first</a></h4>
+					        {% endif %}
 							<br>
 							<br>
 						</div>
 						<br>
 					{% endfor %}
-				{% endif %}
 			</div>
 		</div>
 
