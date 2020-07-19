@@ -1,11 +1,43 @@
 {% extends "navbar.html" %}
 
 {% block content %}
-<br>
-<br>
-<h1 class="greet" style="text-align: center;"> Hello Premium user, {{request.user}}</h1>
+	<br>
+	<br>
+	<h1 class="greet" style="text-align: center;"> Hello Premium user, {{request.user}}</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="service" style="text-align: center;"><h1>Here is the paid content only subscriber can see this and you are a subscriber so you can see this</h1></div>
+	<br>
+	<br>
+	<br>
+	<div class="subscription-detail" style="text-align: center;"><h1>Your are having an active plan<h1></div>
+		<br>
+		<br>
+		<br>
+	<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction()">Cancel subscription</button></div>
+		<br>
+		<br>
+		<br>
+	<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction1()">Restart subscription</button></div>
 
-<div class="service"><h1>Here is the paid content only subscriber can see this and you are a subscriber so you can see this</h1></div>
+	<script>
+	function myFunction() {
+	  var x = confirm("Are you really sure you want to cancel subscription!");
+	  if(x==true)
+	  {
+	  	window.location.replace("cancel/");
+	  }
 
-<div class="subscription-detail"><h1>Your are having currently active plan<h1></div>
+	}
+	function myFunction1() {
+	  var x = confirm("Are you really sure you want to restart subscription!");
+	  if(x==true)
+	  {
+	  	window.location.replace("restart/");
+	  }
+
+	}
+	</script>
 {% endblock %}

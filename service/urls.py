@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, reverse, re_path
-from .views import Home, Login, Logout, Product, CheckOut, User_service
+from .views import Home, Login, Logout, Product, CheckOut,User_service, Cancel,Restart
 from django_registration.backends.one_step.views import RegistrationView
 urlpatterns = [
     path('home/', Home.as_view(), name='home'),
@@ -37,5 +37,15 @@ urlpatterns = [
         'checkout/',
         CheckOut.as_view(),
         name='checkout'
+    ),
+    re_path(
+        r'.*cancel/',
+        Cancel.as_view(),
+        name='cancel'
+    ),
+    re_path(
+        r'.*restart/',
+        Restart.as_view(),
+        name='restart'
     ),
 ]

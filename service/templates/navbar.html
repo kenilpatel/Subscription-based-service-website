@@ -13,27 +13,30 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-transparent">
-	      <div class="container-fluid">
-	        <div class="navbar-header">
-	          <a class="navbar-brand" href="{% url 'home' %}">Whatsbusy</a>
-	        </div>
-	        {% if request.user.is_authenticated %}
-	        	<ul class="nav navbar-nav navbar-right">
-				  <li class="nav-item">
-			        <a class="nav-link" href="">{{ request.user }}</a>
-			      </li>
-		          <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-		        </ul>
-	        {% else %}
-	        	<ul class="nav navbar-nav navbar-right">
-		          <li><a href="{% url 'registeration' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-		          <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-		        </ul>
-	        {% endif %}
+		<div class="navclass">
 
-	      </div>
-	    </nav>
+			<nav class="navbar navbar-transparent">
+		      <div class="container-fluid">
+		        <div class="navbar-header">
+		          <a class="navbar-brand" href="{% url 'home' %}" style="font-size:20px">Whatsbusy</a>
+		        </div>
+		        {% if request.user.is_authenticated %}
+		        	<ul class="nav navbar-nav navbar-right">
+					  <li class="nav-item">
+				        <a class="nav-link" href="">{{ request.user }}</a>
+				      </li>
+			          <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+			        </ul>
+		        {% else %}
+		        	<ul class="nav navbar-nav navbar-right">
+			          <li><a href="{% url 'registeration' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			          <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			        </ul>
+		        {% endif %}
+
+		      </div>
+		    </nav>
+		</div>
 
 	    {% block content %}
         {% endblock %}

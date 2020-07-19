@@ -2,6 +2,21 @@ h4.error
 {
   color: orange;
 }
+.cancel_button
+{
+  width:80%;
+  margin:auto;
+  text-align:center;
+}
+.service
+{
+  width:80%;
+  margin: auto;
+}
+.navclass
+{
+  font-size: 20px;
+}
 .rform
 {
   width:60%;
