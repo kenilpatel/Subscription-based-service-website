@@ -94,7 +94,7 @@ class User_service(TemplateView):
                 if(subscription.status == "trialing"):
                     print("in if")
                     trial = True
-                    days = int((subscription.trial_end - t) / 86400)
+                    days = int((subscription.trial_end - t) / 86400) + 1
                 return render(request, self.template, {
                     'cancel': subscription.cancel_at_period_end,
                     'trial': trial,
@@ -175,7 +175,7 @@ class CheckOut(TemplateView):
             stripe_customer = stripe.Customer.create(
                 email=request.user.email, source=request.POST['stripeToken'])
             plan = 'price_1H6O7TBfWC4lPABgcU5AD5CA'
-            trial_end = datetime.now() + timedelta(seconds=120)
+            trial_end = datetime.now() + timedelta(days=7)
             trial_end = int(time.mktime(trial_end.timetuple()))
             subscription = stripe.Subscription.create(
                 customer=stripe_customer.id,
