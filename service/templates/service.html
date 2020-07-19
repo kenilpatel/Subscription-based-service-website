@@ -12,15 +12,39 @@
 	<br>
 	<br>
 	<br>
-	<div class="subscription-detail" style="text-align: center;"><h1>Your are having an active plan<h1></div>
+	<div class="subscription-detail" style="text-align: center;"><h1>-: Your Plan :-</h1>
+	{% if cancel == False %}
+		{% if trial == True %}
+			<h2 style="text-align:center;"> You are currently on free trial <br><br> your free trial ends in {{days}} days</h2>
+			<br>
+			<br>
+		{% else %}
+			<h2 style="text-align:center;"> You are currently having an active plan and <br><br>you will be charged at the end of billing cycle</h2>
+			<br>
+			<br>
+		{% endif %}
+		<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction()">Cancel subscription</button></div>
 		<br>
 		<br>
 		<br>
-	<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction()">Cancel subscription</button></div>
+	{% else %}
+		{% if trial == True %}
+			<h2 style="text-align:center;"> You are currently on free trial and your subscription will end after free trail <br><br>you will not charged for anything</h2>
+			<br>
+			<br>
+			<br>
+		{% else %}
+			<h2 style="text-align:center;"> Your subscription will end at the end of this billing cycle</h2>
+			<br>
+			<br>
+			<br>
+		{% endif %}
+		<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction1()">Restart subscription</button></div>
 		<br>
 		<br>
 		<br>
-	<div class="cancel_button"><button type="button" class="btn btn-primary" onclick="myFunction1()">Restart subscription</button></div>
+	{% endif %}
+	</div>
 
 	<script>
 	function myFunction() {

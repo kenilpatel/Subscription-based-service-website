@@ -2,6 +2,14 @@ h4.error
 {
   color: orange;
 }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2;
+}
+.subscription
+{
+  width:70%;
+  margin:auto;
+}
 .cancel_button
 {
   width:80%;

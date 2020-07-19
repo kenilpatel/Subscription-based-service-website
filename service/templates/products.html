@@ -16,7 +16,8 @@
 							<br>
 							<h4>Access to exclusive content</h4>
 							<h4>Cancel anytime</h4>
-							<h4>Try 7 days for free</h4>
+							<h4>Try 7 days for free*</h4>
+							<h5>*exclusive for first time users only</h5>
 							<br>
 							{% if request.user.is_authenticated %}
 								<form action="{% url 'checkout' %}" method="POST">
