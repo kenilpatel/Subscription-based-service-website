@@ -3,6 +3,9 @@ from django.urls import path, reverse, re_path
 from .views import Home, Login, Logout, Product,\
     CheckOut, User_service, Cancel, Restart
 from django_registration.backends.one_step.views import RegistrationView
+
+''' this is the list of url patterns and its corresponding view '''
+
 urlpatterns = [
     path('home/', Home.as_view(), name='home'),
     path(
