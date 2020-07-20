@@ -9,8 +9,9 @@ class Service(models.Model):
     charges = models.FloatField()
 
 
-class Subscriber(models.Model):
+class Subscription(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    state = models.CharField(max_length=255, default="not active")
     stripeid = models.CharField(max_length=255)
     stripe_subscription_id = models.CharField(max_length=255)
     cancel_at_period_end = models.BooleanField(default=False)

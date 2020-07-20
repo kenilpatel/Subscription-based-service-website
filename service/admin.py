@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Service, Subscriber
+from .models import Service, Subscription
 # Register your models here.
 
 admin.site.register(Service)
-admin.site.register(Subscriber)
+admin.site.register(Subscription)

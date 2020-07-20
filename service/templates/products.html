@@ -1,12 +1,16 @@
 {% extends "navbar.html" %}
 
 {% block content %}
-		{{message}}
 		<div class="main">
 			<div class="heading">
 
 			</div>
-			<br>
+			{% if messages %}
+				{% for message in messages %}
+					<h4 class="error" style="text-align:center;">{{message}}</h4>
+					<br>
+				{% endfor %}
+			{% endif %}
 			<div class="Product_list">
 					{% for d in services %}
 						<div class="monthly text-center">

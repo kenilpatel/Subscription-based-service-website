@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, reverse, re_path
-from .views import Home, Login, Logout, Product, CheckOut,User_service, Cancel,Restart
+from .views import Home, Login, Logout, Product,\
+    CheckOut, User_service, Cancel, Restart
 from django_registration.backends.one_step.views import RegistrationView
 urlpatterns = [
     path('home/', Home.as_view(), name='home'),
